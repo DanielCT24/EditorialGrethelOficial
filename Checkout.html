@@ -320,13 +320,140 @@
                 <div class="section">
                     <label>
                         <input type="checkbox" id="terms" required>
-                        He leído y acepto los <a href="#">términos y condiciones</a>
+                        He leído y acepto los <a href="#" id="openTermsModal">términos y condiciones</a>
                     </label>
                     <label>
                         <input type="checkbox" id="privacy" required>
-                        He leído y acepto la <a href="#">política de privacidad de datos</a>
+                        He leído y acepto la <a href="#" id="openPrivacyModal">política de privacidad de datos</a>
                     </label>
                 </div>
+                
+                <!-- Modal para Términos y Condiciones -->
+                <div id="termsModal" class="modal modal-terms">
+                    <div class="modal-content">
+                        <span class="close" id="closeTerms">&times;</span>
+                        <h1 class="terminos">Términos y Condiciones</h1>
+                        <p class="terminos">Al utilizar este sitio web, aceptas cumplir con los siguientes términos y condiciones. Si no estás de acuerdo con alguna parte de estos términos, te recomendamos que no utilices este sitio.</p>
+
+                        <h2 class="terminos">1. Aceptación de los Términos</h2>
+                        <p class="terminos">Estos términos y condiciones rigen el uso de este sitio web. Al acceder o utilizar el sitio, aceptas estar sujeto a estos términos. Si no aceptas estos términos, no debes usar el sitio.</p>
+                        
+                        <h2 class="terminos">2. Cambios en los Términos</h2>
+                        <p class="terminos">Nos reservamos el derecho de modificar estos términos en cualquier momento. Cualquier cambio será efectivo inmediatamente después de su publicación en el sitio. Te recomendamos que revises estos términos periódicamente para estar al tanto de cualquier modificación.</p>
+                        
+                        <h2 class="terminos">3. Uso del Sitio</h2>
+                        <p class="terminos">El usuario se compromete a usar el sitio de acuerdo con las leyes aplicables y no utilizar el sitio para fines ilegales o prohibidos. Está prohibido el uso de técnicas de "scraping" o cualquier otra forma de recolección automatizada de datos.</p>
+                        
+                        <h2 class="terminos">4. Propiedad Intelectual</h2>
+                        <p class="terminos">Todo el contenido del sitio, incluidos, entre otros, textos, gráficos, logotipos y software, es propiedad de la empresa o sus licenciantes y está protegido por las leyes de propiedad intelectual. Queda prohibida la reproducción o distribución del contenido sin autorización.</p>
+                        
+                        <h2 class="terminos">5. Limitación de Responsabilidad</h2>
+                        <p class="terminos">La empresa no será responsable de ningún daño directo, indirecto, incidental o consecuente que resulte del uso o la imposibilidad de uso del sitio. Esto incluye, pero no se limita a, daños por pérdida de beneficios, interrupción del negocio o pérdida de información.</p>
+                        
+                        <h2 class="terminos">6. Enlaces a Terceros</h2>
+                        <p class="terminos">Este sitio puede contener enlaces a sitios web de terceros. No somos responsables del contenido de estos sitios ni de sus políticas de privacidad. Te recomendamos que leas las políticas de privacidad de cada sitio que visites.</p>
+                        
+                        <h2 class="terminos">7. Legislación Aplicable</h2>
+                        <p class="terminos">Estos términos se regirán e interpretarán de acuerdo con las leyes del país donde se encuentra la empresa, sin dar efecto a sus principios sobre conflictos de leyes.</p>
+                        
+                        <h2 class="terminos">8. Contacto</h2>
+                        <p class="terminos">Si tienes preguntas sobre estos términos, puedes ponerte en contacto con nosotros a través del correo electrónico: soporte@ejemplo.com.</p>
+                        
+                        <h2 class="terminos">9. Aceptación de los Términos</h2>
+                        <p class="terminos">El uso continuado de este sitio tras la publicación de cambios en los términos implica la aceptación de dichos cambios.</p>
+                        
+                        <h2 class="terminos">10. Terminación</h2>
+                        <p class="terminos">Nos reservamos el derecho a cancelar o restringir el acceso al sitio en cualquier momento y por cualquier razón, sin previo aviso.</p>
+                        
+                        <h2 class="terminos">11. Limitaciones de Uso</h2>
+                        <p class="terminos">El usuario se compromete a no realizar actividades que puedan dañar, desactivar, sobrecargar o perjudicar el sitio, o interferir con el uso del sitio por parte de otros usuarios. Se prohíbe el uso del sitio para transmitir cualquier contenido ilegal, dañino, amenazante o acosador.</p>
+                        
+                        <h2 class="terminos">12. Indemnización</h2>
+                        <p class="terminos">El usuario acepta indemnizar y mantener indemne a la empresa, sus afiliados, empleados y agentes de cualquier reclamación, demanda o pérdida, incluyendo honorarios razonables de abogados, que surja del uso del sitio por parte del usuario o de su violación de estos términos.</p>
+                        
+                        <h2 class="terminos">13. Responsabilidad de Contenido</h2>
+                        <p class="terminos">La empresa no asume ninguna responsabilidad por el contenido generado por los usuarios o por el contenido de terceros que pueda aparecer en el sitio. Los usuarios son responsables de sus propias publicaciones y de cualquier daño que pueda resultar de ellas.</p>
+                        
+                        <h2 class="terminos">14. Política de Cookies</h2>
+                        <p class="terminos">Este sitio utiliza cookies para mejorar la experiencia del usuario. Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo al visitar un sitio web. Puedes optar por no aceptar cookies, pero esto puede afectar tu capacidad para utilizar el sitio de manera efectiva.</p>
+                        
+                        <h2 class="terminos">15. Fuerza Mayor</h2>
+                        <p class="terminos">No seremos responsables de ninguna falla o retraso en el cumplimiento de nuestras obligaciones en virtud de estos términos si dicha falla o retraso se debe a causas ajenas a nuestro control razonable, incluyendo, pero no limitándose a, actos de Dios, guerras, embargos, disturbios o desastres naturales.</p>
+                        
+                        <h2 class="terminos">16. Disposiciones Generales</h2>
+                        <p class="terminos">Si alguna disposición de estos términos se considera inválida o inaplicable, las demás disposiciones seguirán siendo válidas y aplicables. Estos términos constituyen el acuerdo completo entre el usuario y la empresa con respecto al uso del sitio.</p>
+                        
+                        <h2 class="terminos">17. Modificaciones</h2>
+                        <p class="terminos">La empresa se reserva el derecho de modificar estos términos en cualquier momento. Cualquier modificación será efectiva inmediatamente después de su publicación en el sitio. El uso continuado del sitio tras la publicación de cambios en los términos implica la aceptación de dichos cambios.</p>
+                        
+                        <h2 class="terminos">18. Derechos Reservados</h2>
+                        <p class="terminos">Todos los derechos no expresamente otorgados en estos términos son reservados por la empresa. Cualquier uso no autorizado del sitio o de su contenido puede ser objeto de acción legal.</p>
+                        
+                        <p class="terminos">Estos términos y condiciones fueron actualizados por última vez el 28/09/2024. Te agradecemos tu comprensión y cooperación.</p>
+                        
+                    </div>
+                </div>
+                
+                <!-- Modal para Política de Privacidad -->
+                <div id="privacyModal" class="modal modal-privacy">
+                    <div class="modal-content">
+                        <span class="close" id="closePrivacy">&times;</span>
+                        <h1 class="terminos">Política de Privacidad</h1>
+                        <p class="terminos">Esta política de privacidad describe cómo recogemos, usamos y compartimos tu información personal.</p>
+                        
+                        <h2 class="terminos">1. Información que Recogemos</h2>
+                        <p class="terminos">Recogemos información que tú nos proporcionas al registrarte, como tu nombre, correo electrónico, y otra información relevante.</p>
+                        
+                        <h2 class="terminos">2. Uso de la Información</h2>
+                        <p class="terminos">Usamos tu información para ofrecerte nuestros servicios, comunicarnos contigo, y mejorar nuestra plataforma.</p>
+                        
+                        <h2 class="terminos">3. Compartir Información</h2>
+                        <p class="terminos">No vendemos ni compartimos tu información personal con terceros sin tu consentimiento, salvo por requisitos legales.</p>
+                        
+                        <h2 class="terminos">4. Seguridad</h2>
+                        <p class="terminos">Tomamos medidas razonables para proteger tu información personal. Sin embargo, no podemos garantizar la seguridad absoluta.</p>
+                        
+                        <h2 class="terminos">5. Cambios a esta Política</h2>
+                        <p class="terminos">Nos reservamos el derecho de modificar esta política de privacidad en cualquier momento. Te notificaremos sobre cambios significativos.</p>
+                        
+                        <h2 class="terminos">6. Contacto</h2>
+                        <p class="terminos">Si tienes preguntas sobre esta política, contáctanos a través de nuestro formulario de contacto.</p>
+                        
+                        <h2 class="terminos">7. Cookies</h2>
+                        <p class="terminos">Este sitio utiliza cookies para mejorar tu experiencia. Puedes gestionar tus preferencias de cookies en la configuración de tu navegador.</p>
+                        
+                        <h2 class="terminos">8. Derecho a Acceder y Rectificar</h2>
+                        <p class="terminos">Tienes derecho a acceder, corregir o eliminar tu información personal en cualquier momento. Para hacerlo, contáctanos.</p>
+                        
+                        <h2 class="terminos">9. Retención de Datos</h2>
+                        <p class="terminos">Retenemos tu información personal solo durante el tiempo necesario para cumplir con los propósitos para los que fue recogida.</p>
+                        
+                        <h2 class="terminos">10. Transferencias Internacionales</h2>
+                        <p class="terminos">Si transferimos tu información personal a otros países, aseguraremos que se apliquen medidas adecuadas de protección de datos.</p>
+                        
+                        <h2 class="terminos">11. Menores de Edad</h2>
+                        <p class="terminos">No recogemos intencionadamente información de menores de 13 años. Si descubrimos que hemos recogido dicha información, la eliminaremos.</p>
+                        
+                        <h2 class="terminos">12. Quejas</h2>
+                        <p class="terminos">Si tienes alguna queja sobre nuestra política de privacidad o cómo manejamos tu información, puedes contactar con las autoridades competentes.</p>
+                        
+                        <h2 class="terminos">13. Consentimiento</h2>
+                        <p class="terminos">Al utilizar nuestro sitio, das tu consentimiento para la recopilación y uso de tu información como se describe en esta política.</p>
+                        
+                        <h2 class="terminos">14. Enlaces a Terceros</h2>
+                        <p class="terminos">Nuestro sitio puede contener enlaces a otros sitios. No somos responsables de las prácticas de privacidad de estos sitios.</p>
+                        
+                        <h2 class="terminos">15. Modificaciones a los Términos</h2>
+                        <p class="terminos">Cualquier modificación a esta política se publicará en esta página. Te recomendamos revisarla regularmente.</p>
+                        
+                    </div>
+                </div>
+                
+
+
+
+
+
                 <h5>- RELLENE LOS DATOS REQUERIDOS PARA CONTINUAR</h5>
                 <button class="btn-detalles" id="btn-detalles" type="button" onclick="openPopup('yape-popup')" disabled>Finalizar Compra</button>
 
@@ -750,10 +877,50 @@ function validateForm() {
     
 
 
+<!-- TERMINOS Y CONDICIONES -->
 
 
+<script>
+    // Obtener los elementos del modal y los botones
+var termsModal = document.getElementById("termsModal");
+var privacyModal = document.getElementById("privacyModal");
+var openTermsModal = document.getElementById("openTermsModal");
+var openPrivacyModal = document.getElementById("openPrivacyModal");
+var closeTerms = document.getElementById("closeTerms");
+var closePrivacy = document.getElementById("closePrivacy");
 
+// Función para abrir el modal de términos y condiciones
+openTermsModal.onclick = function(event) {
+    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    termsModal.style.display = "block"; // Mostrar el modal
+};
 
+// Función para abrir el modal de política de privacidad
+openPrivacyModal.onclick = function(event) {
+    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    privacyModal.style.display = "block"; // Mostrar el modal
+};
+
+// Función para cerrar el modal de términos
+closeTerms.onclick = function() {
+    termsModal.style.display = "none"; // Ocultar el modal
+};
+
+// Función para cerrar el modal de privacidad
+closePrivacy.onclick = function() {
+    privacyModal.style.display = "none"; // Ocultar el modal
+};
+
+// Cerrar el modal si se hace clic fuera de él
+window.onclick = function(event) {
+    if (event.target == termsModal) {
+        termsModal.style.display = "none";
+    } else if (event.target == privacyModal) {
+        privacyModal.style.display = "none";
+    }
+};
+
+</script>
 
 
 
