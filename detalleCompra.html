@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles de la Boleta</title>
+    <link rel="stylesheet" href="CSS - Boleta.css">
+</head>
+<body>
+    <div class="boleta-container">
+        <h1>Detalles de la Boleta</h1>
+        <div id="detallesBoleta"></div>
+    </div>
+
+    <script>
+        function cargarDetallesBoleta() {
+            // Obtener el ID de la compra desde localStorage
+            const compraId = localStorage.getItem('selectedPurchaseId');
+            let datosGenerados = JSON.parse(localStorage.getItem('datosGenerados')) || [];
+            const detallesBoleta = document.getElementById('detallesBoleta');
+
+            // Buscar la compra correspondiente usando el ID
+            const compraSeleccionada = datosGenerados.find(data => data.id === compraId);
+
+            // Mostrar los detalles de la compra
+            if (compraSeleccionada) {
+                detallesBoleta.innerHTML = `
+                    <p><strong>ID de Compra:</strong> ${compraSeleccionada.id}</p>
+                    <p><strong>Fecha de Compra:</strong> ${compraSeleccionada.fecha}</p>
+                    <p><strong>Monto:</strong> ${compraSeleccionada.precio}</p>
+                    <p><strong>Estado:</strong> En Revisión</p>
+                `;
+            } else {
+                detallesBoleta.innerHTML = `<p>No se encontraron detalles para esta compra.</p>`;
+            }
+        }
+
+        window.onload = cargarDetallesBoleta;
+    </script>
+</body>
+</html>

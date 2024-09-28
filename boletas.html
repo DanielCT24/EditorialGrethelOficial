@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        .boleta {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            background: white;
+            border-radius: 5px;
+        }
+        .boton-ver {
+            display: inline-block;
+            padding: 8px 12px;
+            margin-top: 10px;
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .detalles-boleta {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Boletas de Compra</h1>
+    <div id="boletaContainer"></div>
+    <div id="detallesBoletaContainer"></div>
+
+    <script>
+        // Recuperar datos de localStorage
+        const boletaContainer = document.getElementById('boletaContainer');
+        let datosGenerados = JSON.parse(localStorage.getItem('datosGenerados')) || [];
+
+        // Mostrar datos
+        datosGenerados.forEach((compra, index) => {
+            const boletaHTML = `
+                <div class="boleta">
+                    <h2>ID: ${compra.id}</h2>
+                    <p>Fecha: ${compra.fecha}</p>
+                    <p>Precio: $${compra.precio}</p>
+                    <button class="boton-ver" onclick="verBoleta(${index})">Ver Boleta</button>
+                </div>
+            `;
+            boletaContainer.innerHTML += boletaHTML;
+        });
+
+        function verBoleta(index) {
+            const compra = datosGenerados[index];
+            const detallesHTML = `
+                <div class="detalles-boleta">
+                    <h2>Detalles de la Boleta</h2>
+                    <p><strong>ID:</strong> ${compra.id}</p>
+                    <p><strong>Fecha:</strong> ${compra.fecha}</p>
+                    <p><strong>Precio:</strong> $${compra.precio}</p>
+                    <p><strong>Items:</strong> ${compra.items}</p>
+                    <p><strong>Total:</strong> ${compra.total}</p>
+                    <p><strong>Costo de Envío:</strong> ${compra.costoEnvio}</p>
+                    <p><strong>Costo de Impuesto:</strong> ${compra.costoImpuesto}</p>
+                    <p><strong>Mensaje de Envío Gratis:</strong> ${compra.freeShippingMessage}</p>
+                </div>
+            `;
+            // Limpiar el contenedor de detalles y mostrar la nueva boleta
+            const detallesBoletaContainer = document.getElementById('detallesBoletaContainer');
+            detallesBoletaContainer.innerHTML = detallesHTML;
+        }
+    </script>
+</body>
+</html>
