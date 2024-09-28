@@ -2148,7 +2148,7 @@ img.pagoyape-img {
     width: 225px;
     position: fixed;
     margin-top: 11px;
-    margin-left: -936px;
+    margin-left: -1038px;
     margin-top: -21px;
 }
 
@@ -2445,8 +2445,8 @@ display:none
     
     .menu a {
         float: left;
-        margin-left: 32px;
-        margin-right: 10px;
+        margin-left: 22px;
+        margin-right: 3px;
         margin-top: 17px;
     }
     .menu-icono {
