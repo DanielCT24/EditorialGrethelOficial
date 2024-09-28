@@ -1988,10 +1988,11 @@ p.footer-text {
 h3#userNames {
     text-align: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: 8px;
     color: #82069f;
     text-transform: uppercase;
+    width: 114px;
 }
 
 h3#userDNI {
