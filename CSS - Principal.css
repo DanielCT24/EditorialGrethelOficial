@@ -1983,4 +1983,5 @@ h3#userNames {
     justify-content: center;
     align-content: center;
     text-align: center;
+    text-transform: UPPERCASE;
 }
