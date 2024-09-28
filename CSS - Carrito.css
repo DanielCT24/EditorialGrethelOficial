@@ -694,3 +694,139 @@ p {
 .hidden {
     display: none;
 }
+
+
+
+
+
+/* --------------- MODAL TERMINOS Y CONDICIONES -------------------- */
+
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Mantener el modal en su lugar */
+    z-index: 1000; /* Asegurar que esté encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilitar el desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro con mayor opacidad */
+    animation: fadeIn 0.5s; /* Animación de aparición */
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Contenido del modal */
+.modal-content {
+    background: #f3b6f9;
+    border-radius: 20px; /* Bordes más redondeados */
+    margin: 5% auto; /* Espaciado del modal */
+    padding: 40px; /* Espaciado interno */
+    border: 3px solid #bd26eb; /* Borde definido */
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+    max-width: 1200px; /* Aumento en el ancho máximo del modal */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    color: #444; /* Color de texto más oscuro para mejor legibilidad */
+}
+
+/* Estilo para los modales específicos */
+.modal-terms .modal-content {
+    border-color: #ef40ff; /* Borde distintivo para términos */
+}
+
+/* Botón de cerrar */
+.close {
+    color: #cd1ee4; /* Blanco para el botón de cerrar */
+    float: right;
+    font-size: 50px; /* Mayor tamaño para mejor visibilidad */
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #a308c2; /* Cambio de color al pasar el ratón */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo de encabezados en el modal */
+h2.terminos {
+    color: #272727; /* Blanco para el título */
+    font-size: 32px; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 15px; /* Espaciado inferior */
+    text-align: left; /* Alinear a la izquierda */
+    text-transform: uppercase; /* Mayúsculas para un toque profesional */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* Estilo de párrafos */
+p.terminos {
+    line-height: 1.8; /* Espaciado entre líneas */
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-size: 20px; /* Tamaño de fuente adecuado */
+}
+
+
+h1.terminos{
+    font-size: 50px;
+    color: #272727;
+}
+
+
+@media(max-width: 991px){
+
+
+    h1.terminos {
+        font-size: 24px;
+    }
+    h2.terminos {
+        color: #272727; /* Blanco para el título */
+        font-size: 15px; /* Tamaño de fuente más grande para el título */
+        margin-bottom: 15px; /* Espaciado inferior */
+        text-align: left; /* Alinear a la izquierda */
+        text-transform: uppercase; /* Mayúsculas para un toque profesional */
+        letter-spacing: 1.5px; /* Espaciado entre letras */
+    }
+    
+    /* Estilo de párrafos */
+    p.terminos {
+        line-height: 1.8; /* Espaciado entre líneas */
+        margin-bottom: 15px; /* Espaciado inferior */
+        font-size: 15px; /* Tamaño de fuente adecuado */
+    }
+
+    .modal-content {
+        background: #f3b6f9;
+        border-radius: 20px; /* Bordes más redondeados */
+        margin: 5% auto; /* Espaciado del modal */
+        padding: 40px; /* Espaciado interno */
+        border: 3px solid #bd26eb; /* Borde definido */
+        box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6); /* Sombra más pronunciada */
+        width: 90%;
+        font-family: 'Roboto', sans-serif; /* Fuente moderna */
+        color: #444; /* Color de texto más oscuro para mejor legibilidad */
+    }
+
+
+/* Botón de cerrar */
+.close {
+    color: #cd1ee4; /* Blanco para el botón de cerrar */
+    float: right;
+    margin-right: -6px;
+    margin-top: -27px;
+    font-size: 35px; /* Mayor tamaño para mejor visibilidad */
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+}
